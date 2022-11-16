@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body,
+    html {
+      font-family: 'Arvo', serif;
+      scroll-behavior: smooth;
+      /* color: #fff; */
+    }
+
+    header {
+      background-image: url(https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-header-bg.jpg);
+    }
+
+    .text-yellow {
+      color: #ffcc00;
+    }
+
+    .text-red {
+      color: #e7272d;
+    }
+
+    .bg-red {
+      background-color: #e7272d;
+    }
+
+    .navbar-brand p span {
+      color: #fff;
+    }
+
+    .navbar-toggler {
+      background-color: #ffcc00;
+    }
+
+    header .navbar .navbar-nav .nav-item .nav-link:hover {
+      color: #e7272d !important;
+    }
+
+    .nav-hov:hover {
+      border-bottom: #ffcc00;
+      border-bottom-style: solid;
+    }
+
+    .header-content {
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-content h1 {
+      font-size: 4rem;
+    }
+
+    .header-content .price {
+      font-size: 3rem;
+    }
+
+    /* BEST OFFER */
+    .best-offer {
+      background-image: url("https://live.staticflickr.com/65535/52499889898_b30a92f3b4_b.jpg");
+      height: 50vh;
+    }
+
+    .best-offer2 {
+      background-image: url("https://gcdnb.pbrd.co/images/AgUsAYN2V4no.jpg?o=1");
+      height: 50vh;
+    }
+
+    .parallax {
+      min-height: 500px;
+      background-attachment: fixed;
+    }
+
+    /* shipping hours */
+    .shipping-hours {
+      background-image: url("https://gcdnb.pbrd.co/images/GkUw9i9DHx8Z.jpg?o=1");
+      min-height: 200px;
+      background-attachment: fixed;
+    }
+
+    .bg-cover {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .best-offer .bestoffer2 .row div {
+      display: flex;
+      align-items: end;
+      text-align: end;
+    }
+
+
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .best-offer h1 {
+      font-family: "Sofia", sans-serif;
+    }
+
+    .best-offer2 h1 {
+      font-family: "Sofia", sans-serif;
+    }
+
+    /* OUR MENU SECTION */
+    .our-menu ul li a.active {
+      border-bottom: 3px solid #ffcc00;
+    }
+
+    footer .row div:last-child {
+      text-align: end;
+    }
+
+    @media (max-width: 991px) {
+      .navbar {
+        background-color: transparent;
+        z-index: 999;
+        backdrop-filter: blur(40px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .best-offer .row div {
+        align-items: start;
+        text-align: start;
+      }
+
+
+      footer .row div,
+      footer .row div:last-child {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .text-sm-none {
+        display: none;
+      }
+
+      .col-md-mb-3 {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <header class="vh-100 bg-cover" id="top">
+    <nav class="navbar navbar-expand-lg pt-5 pb-5">
+      <div class="container">
+        <a class="navbar-brand d-flex align-content-center align-items-center px-4" href="#">
+          <img src="https://gcdnb.pbrd.co/images/QtjWxPdHbl6e.png?o=1" alt="Logo" height="50"
+            class="d-inline-block align-text-top">
+          <img src="https://gcdnb.pbrd.co/images/yELpEzjDvaag.png?o=1" alt="Logo" height="50"
+            class="ps-3 d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-4 collapse navbar-collapse justify-content-end px-4" id="navbar">
+          <ul class="navbar-nav mb-2 mt-4 mb-lg-0 text-md-end">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold text-white mx-lg-2" href="#our-menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white mx-lg-2" href="#shipping-hours">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white mx-lg-2" type="button" data-bs-toggle="modal"
+                data-bs-target="#reservationModal">Reservation</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="header-content container ">
+      <p class="text-white">Express food to raise your mood!</p>
+      <h1 class="fw-bold text-white">KodeGo Burger</h1>
+      <p class="price text-yellow fw-bold"><b>₱</b> 149.99</p>
+      <button class="bg-red px-5 py-3 text-white fw-bold border-0">BUY NOW</button>
+    </div>
+  </header>
+
+  <!-- CHEF SECTION -->
+  <section class="chef pt-5 mt-2">
+    <div class="container text-dark">
+      <div class="row">
+
+        <!-- sir bryl pic -->
+        <div class="col-md-6 d-flex col-sm-12 col-lg-4 justify-content-center">
+          <img src="https://live.staticflickr.com/65535/52498805181_52a7c7e430_z.jpg" class="" alt="Chef Bryl Lim">
+        </div>
+
+        <!-- sir bryl text -->
+        <div class="col-md-6 col-sm-12 col-lg-4 text-center text-md-start">
+          <div>
+            <h1 class="fw-bold mt-5">Bryl Lim</h1>
+            <div class="text-muted">
+              <h4 class="fw-bold mb-5">Head Chef</h4>
+              <p class="fs-6">Welcome to Bryl's Burger. Here we try to share our vision about food quality, our mission
+                about<br>customer`s satisfaction and introducing services that we provide for each one of you.</p>
+              <p class="fs-6">We offer fast food, served fresh with the highest quality of ingredients: fresh, handcut
+                chicken, buns baked fresh in our own bakeries and the most delicious patties with a variety of toppings.
+              </p>
+            </div>
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-signature.png"
+              class="img-fluid mb-4" alt="">
+          </div>
+        </div>
+
+        <!-- reservation -->
+        <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
+          <div class="bg-dark text-white p-5">
+            <h3 class="fw-bold mb-3 text-center">Make a Reservation</h3>
+            <form>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Name" name="name" id="fieldname">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="E-mail" name="email" id="fieldemail">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Phone">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Time" id="fieldaddress">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" placeholder="Message " name="message" id="fieldmessage"
+                  rows="5"></textarea>
+              </div><br>
+              <div style="text-align: center;">
+                <button class="form-control btn btn-danger">Reserve</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST OFFER CAROUSEL -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item ">
+        <section class="best-offer2 bg-cover">
+          <div class="container">
+            <div class="row py-md-5">
+              <div class="p-mdy-5 mt-4  col-12 col-lg-11 pe-md-5 text-light d-flex align-content-end flex-column text-end ">
+                <div class="h5">
+                  <h1 class="mb-3">Wombo Combo</h1>
+                  <h2 class="fw-bold mb-3">Beer & Classic Smash</h2>
+                  <p class="h1 fw-bold mb-3 text-yellow"><b>₱</b> 229.00 <span><s class="h4 text-light"> <b>₱</b>
+                        259.00</s></span></p>
+                  <p class="text-sm-none small mb-3"> Get full with a full meal wombo combo!<br>A Beer of your choice
+                    and a Double
+                    Smash Burger!
+                  </p>
+                  <a class="p-3 btn btn-primary btn-lg btn-danger" role="button">Order Now</a>
+                </div>
+              </div>
+              <div class="col-lg-1 pe-5">
+              </div>
+            </div>
+        </section>
+      </div>
+      <div class="carousel-item active">
+        <section class="best-offer bg-cover ">
+          <div class="container">
+            <div class="row py-md-5">
+              <div
+                class="h5 mt-4 my-md-5 pt-sm-0 col-md-7 col-sm-12 pe-5 text-light text-start d-flex flex-column align-items-md-end text-md-end">
+                <h1 class="mb-3">Today's Highlight</h1>
+                <h2 class="fw-bold mb-3">Full Meat Patty</h2>
+                <p class="h1 fw-bold mb-3 text-yellow"><b>₱</b> 149.00 <span><s class="h4 text-light"> <b>₱</b>
+                      169.00</s></span></p>
+                <p class="text-sm-none small mb-3"> Enjoy our top seller on a lower price!<br>Available for a limited
+                  time only.</p>
+                <a class="p-3 btn btn-primary btn-lg btn-danger" role="button">Order Now</a>
+              </div>
+              <div class="col-md-6 text-light">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR MENU NAV -->
+  <section class="our-menu" id="our-menu">
+    <div class="container mt-5">
+      <h1 class="text-center text-dark fw-bold mb-4">Our Menu</h1>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active " href="#">ALL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hov" href="#">BURGERS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hov" href="#">DRINKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hov" href="#">SNACKS</a>
+        </li>
+      </ul>
+
+      <!-- Menu -->
+      <div class="row text-dark">
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu2.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Classic Smash</p>
+            <p class="text-center text-muted">The classic smash rocking with Bacon, tomato, cheese, angus patty and
+              lettuce.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 129.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu1.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Double Smash</p>
+            <p class="text-center text-muted">Level up your Smash Burger, double the patty,<br>double the fun.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 139.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu3.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Bacon Avocado Club</p>
+            <p class="text-center text-muted">We got avocados in a Smash! With lettuce, tomatoes, pickes and a thick
+              chicken patty.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 149.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu4.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">BBQ, Bacon & Cheddar</p>
+            <p class="text-center text-muted">Bacon and Cheese in a Burger! Thick beef patty with bacon, cheese and
+              lettuce.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 159.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-dark">
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu5.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Juice</p>
+            <p class="text-center text-muted">Freshly brewed juice just for you. We ave lemonades, shakes and mocktails.
+            </p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 80.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu6.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Beer</p>
+            <p class="text-center">Smash that Burger with a Smashing drink! Get you ice cold beer at the bar.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 120.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu7.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Smashchips</p>
+            <p class="text-center text-muted">Pair your drinks with our crispy and freshly fried potato and corn chips.
+            </p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 109.00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 p-3">
+          <div class="container mt-3">
+            <img
+              src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-menu8.jpg"
+              class="img-fluid w-100">
+            <p class="text-center fw-bold">Calzone</p>
+            <p class="text-center text-muted">Pizza? We got you! Our calzone will definitely satisfy that cheese
+              craving.</p>
+            <p class="text-red fs-3 text-center fw-bold"><b>₱</b> 109.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHIPPING HOURS -->
+  <section class="shipping-hours bg-cover" id="shipping-hours">
+    <div class="container">
+      <div class="row py-5">
+        <div class=" my-5 col-md-5 col-lg-4 col-sm-12 pe-5 text-light ">
+          <h2 class="fw-bold mb-3">Free Shipping</h2>
+          <p class="fs-4">Contact us on all orders</p>
+          <h3 class="fw-bold">Call: <span class="text-yellow fw-bold">1-800-1234-567</span></h3>
+        </div>
+        <div class="col-md-5 col-lg-4 col-sm-12 pe-5 text-light my-5">
+          <h2 class="fw-bold mb-3">Open on</h2>
+          <p class="fs-4">Monday to Sunday:</p>
+          <h3 class="fw-bold text-yellow">9:00am to 7:00pm</span></h3>
+        </div>
+        <div class="col-md-4 col-sm-12">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM -->
+  <section class="our-team my-5">
+    <div class="container">
+      <h1 class="text-center text-dark fw-bold mb-5">Meet Our Team</h1>
+      <div class="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-1 g-4  d-flex justify-content-evenly">
+        <div class="col">
+          <div class="card h-100 border-light">
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C5603AQG1fyNvBhHhjg/profile-displayphoto-shrink_800_800/0/1616644220353?e=1674086400&v=beta&t=ZzVAmXW8TQpxD2HXjB2yFg30cw7gbQsB4GIVb5yyL_Q&fbclid=IwAR3y7lvBhjSZepa0YE0cnkf34FhADT8coTDfBDmsfrmXygG3F7Ynweh7uDU"
+              class="card-img-top rounded-circle" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Jomar Clado</h5>
+              <p class="card-text text-muted"><small>Chef de Cuisine</small></p>
+            </div>
+            <div class="card-footer bg-white border-0 text-center">
+              <small class="text-muted cursor-pointer">
+                <i class="fa fa-facebook mx-2 text-red fs-5"></i>
+                <i class="fa fa-twitter mx-2 text-red fs-5"></i>
+                <i class="fa fa-pinterest mx-2 text-red fs-5"></i>
+                <i class="fa fa-linkedin mx-2 text-red fs-5"></i>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-light">
+            <img
+              src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/311266354_3402936653288056_4562949315754115145_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEjccB2gsQVHgzWrUYiqgJ9y67-NZyneyvLrv41nKd7K2N6EyoXutVC70WbNq34RV93dfqvPKz7vySaP1NdnOGq&_nc_ohc=uWlWnx14Dt8AX-MxmzB&tn=X3-jnSwsc2cIEgDB&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfB_qw7tJ8ctJISif7K3GHnmCJpx-VqoRmpZGlKfCI0kYA&oe=6377A027"
+              class="card-img-top rounded-circle" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Lou Loquere</h5>
+              <p class="card-text text-muted"><small>Sous Chef</small></p>
+            </div>
+            <div class="card-footer bg-white border-0 text-center">
+              <small class="text-muted cursor-pointer ">
+                <i class="fa fa-facebook mx-2 text-red fs-5"></i>
+                <i class="fa fa-twitter mx-2 text-red fs-5"></i>
+                <i class="fa fa-pinterest mx-2 text-red fs-5"></i>
+                <i class="fa fa-linkedin mx-2 text-red fs-5"></i>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-light">
+            <img
+              src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/310990024_395741276012050_4190951456932882167_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHsZuC5-9m3gU_KENQxp2N3tgU9pjqja0G2BT2mOqNrQdmMXAj8kQha5CAqrMp7AJ0zo7qbQGlsxCH7euwki2gM&_nc_ohc=6AMP0ybZZn0AX9hTdXg&_nc_ht=scontent.fmnl25-5.fna&oh=03_AdSeq-VPwOPtcFT4jKpRJwtkuBiwJ8ystVQqRC-8V3n7nQ&oe=6399A5A9"
+              class="card-img-top rounded-circle" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Mark Olofornes</h5>
+              <p class="card-text text-muted"><small>Chef de Partie</small></p>
+            </div>
+            <div class="card-footer bg-white border-0 text-center">
+              <small class="text-muted cursor-pointer ">
+                <i class="fa fa-facebook mx-2 text-red fs-5"></i>
+                <i class="fa fa-twitter mx-2 text-red fs-5"></i>
+                <i class="fa fa-pinterest mx-2 text-red fs-5"></i>
+                <i class="fa fa-linkedin mx-2 text-red fs-5"></i>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-light">
+            <img
+              src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t1.15752-9/310327187_681008666982573_6593573945848042362_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGyrsxQjZuv0wWxqTM8zLwe-iIEvhgQ-DD6IgS-GBD4MBLwQW777kk1hOf1_6PxZDtIvlFnn5_VRxAwx51b1G_z&_nc_ohc=GvLPs6VptHcAX9wCNUe&_nc_ht=scontent.fmnl25-1.fna&oh=03_AdQfuWrEZPslLBQW8bFCRLGs3onCAXKiUuqL46annGNVhw&oe=6399C10E"
+              class="card-img-top rounded-circle" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Justin Masiga</h5>
+              <p class="card-text text-muted cursor-pointer"><small>Chef de Partie</small></p>
+            </div>
+            <div class="card-footer bg-white border-0 text-center">
+              <small class="text-muted">
+                <i class="fa fa-facebook mx-2 text-red fs-5"></i>
+                <i class="fa fa-twitter mx-2 text-red fs-5"></i>
+                <i class="fa fa-pinterest mx-2 text-red fs-5"></i>
+                <i class="fa fa-linkedin mx-2 text-red fs-5"></i>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-light">
+            <img
+              src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/311228007_1089842975009241_6627100117498589705_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHT4SpROckPBYGT0md2lMrBn8qp5Q9eEfyfyqnlD14R_G_bnwwsY6Q5V7WgWWjsSTdV2Dn2Ggv4QggeYZroAaGT&_nc_ohc=QgijMVTKQSsAX_OUzdZ&_nc_ht=scontent.fmnl25-5.fna&oh=03_AdQ2q-OugPVj3sK6pgtgEWtf9RU0zPoylPJPIpz5wkE0RQ&oe=6399A4A2"
+              class=" card-img-top rounded-circle" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Jomar Neri</h5>
+              <p class="card-text text-muted"><small>Chef de Partie</small></p>
+            </div>
+            <div class="card-footer bg-white border-0 text-center">
+              <small class="text-muted cursor-pointer ">
+                <i class="fa fa-facebook mx-2 text-red fs-5"></i>
+                <i class="fa fa-twitter mx-2 text-red fs-5"></i>
+                <i class="fa fa-pinterest mx-2 text-red fs-5"></i>
+                <i class="fa fa-linkedin mx-2 text-red fs-5"></i>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="bg-dark p-4">
+    <div class="container">
+      <div class="row align-items-center mt-2 text-white">
+        <div class="col-md-4 col-sm-12 d-flex align-items-center mb-3">
+          <img src="https://gcdnb.pbrd.co/images/QtjWxPdHbl6e.png?o=1" alt="Logo" height="50"
+            class="d-inline-block align-text-top">
+          <img src="https://gcdnb.pbrd.co/images/yELpEzjDvaag.png?o=1" alt="Logo" height="50"
+            class="ps-3 d-inline-block align-text-top">
+        </div>
+        <div class="col-md-4 col-sm-12 text-center mb-3">
+          <i class="cursor-pointer fa fa-facebook mx-3"></i>
+          <i class="cursor-pointer fa fa-twitter mx-3"></i>
+          <i class="cursor-pointer fa fa-pinterest mx-3"></i>
+          <i class="cursor-pointer fa fa-linkedin mx-3"></i>
+        </div>
+        <div class="col-md-4 col-sm-12">Copyright © 2022 Bryl's Burger</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="reservationModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark rounded-5">
+        <div class="bg-dark col-md-12 col-sm-12 col-lg-12 rounded-5">
+          <button type="button" class="mt-4 me-4 btn-close btn-close-white float-end" data-bs-dismiss="modal"></button>
+          <div class="bg-dark text-white p-5 rounded-5">
+            <h3 class="fw-bold mb-3 text-center">Make a Reservation</h3>
+            <form>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Name" name="name" id="fieldname">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="E-mail" name="email" id="fieldemail">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Phone">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Time" id="fieldaddress">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" placeholder="Message " name="message" id="fieldmessage"
+                  rows="5"></textarea>
+              </div><br>
+              <div style="text-align: center;">
+                <button class=" form-control btn btn-danger" type="submit" data-bs-dismiss="modal">Reserve</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

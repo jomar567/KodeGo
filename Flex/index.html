@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Pyramid</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="content-area">
+    <header>
+      <p>Header</p>
+    </header>
+    
+    <main>
+      <form>
+        <div class="form-content">
+          <div>
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="input-group">
+              <label>Phone</label>
+              <input type="number" name="phone">
+            </div>
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" name="email">
+            </div>
+            <p>Pickup Date Time <input type="datetime-local" name="pickupdate"></p>
+            <div class="input-group">
+              <label>Pickup Place</label>
+              <select id="pickup" name="pickup">
+                <option selected>Select One</option>
+                <option value="1">Church</option>
+                <option value="2">School</option>
+                <option value="3">Park</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Dropoff Place</label>
+              <input type="text" name="dropoff">
+            </div>
+          </div>
+          <div>
+            <p>Which vehicle do you require</p>
+            <input type="radio" id="van" name="vehicle" value="Van">
+            <label for="van">Van</label><br>
+            <input type="radio" id="jeep" name="vehicle" value="Jeep">
+            <label for="jeep">Jeep</label><br>
+            <input type="radio" id="tricycle" name="vehicle" value="Tricycle">
+            <label for="tricycle">Tricycle</label>
+  
+            <p>Extras</p>
+            <input type="checkbox" id="babyseat" name="babyseat" value="Baby seat">
+            <label for="vehicle1">Baby Seat</label><br>
+            <input type="checkbox" id="wheelchair" name="wheelchair" value="Wheelchair Access">
+            <label for="vehicle2">Wheelchair Access</label><br>
+            <input type="checkbox" id="stocktip" name="stocktip" value="Stock Tip">
+            <label for="vehicle3">Stock Tip</label>
+          </div>
+        </div>
+        <button>Submit Booking</button>
+      </form>
+
+      <section class="aside">
+        <p>Aside</p>
+      </section>
+
+      <section class="nav">
+        <p>Nav</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </div>
+</body>
+</html>

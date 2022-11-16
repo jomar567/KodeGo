@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Style CSS area-->
+<style>
+*{
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-color: red;
+    }
+    .hide3{
+    display: none;
+    }
+    .hide2{
+    display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        background-color: blue;
+    }
+    .hide3{
+    display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        background-color: orange;
+    }
+    .hide3{
+    display:inline;
+    }
+}
+
+
+.hd1{
+    padding: 45px;
+    text-align: center;
+}
+nav ul{
+    list-style-type: none;
+    background-color: rgb(73, 73, 73);
+    color: whitesmoke;
+    padding: 20px 0;
+} 
+nav li {
+    display: inline;
+    margin: 0 12px;
+    font-size: 17px;
+    font-weight: bold;
+   
+}
+.content{
+    display: flex;
+    background-color: rgb(50, 143, 50);
+}
+section{
+    margin: 2px 2px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    background-color: rgb(212, 228, 235);
+}
+</style>     
+<!--Style CSS area-->
+    </head>
+    <body>
+        <header class="header hd1">
+            <div>
+                <h1>Online Magazine </h1>
+            </div>
+        </header>
+        <div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav> 
+        </div>
+        <div class="content">
+            <section class="hide1">
+                <h1>Lifestyle</h1><br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+            <section class="hide2">
+                <h1>Business</h1><br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                
+            </section>
+            <section class="hide3">
+                <h1>Sports</h1><br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+        </div>
+
+    </body>
+
+
+    <footer>
+
+    </footer>
+</html>

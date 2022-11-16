@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+  }
+  ul li {
+    text-decoration: none;
+    list-style: none;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  
+  header {
+    background-color: #90C63E;
+    padding: 20px;
+  }
+  header p {
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+  header p ,footer p {
+    font-weight: bold;
+  }
+  main {
+    display: flex;
+  }
+  form {
+    background-color: #f4f4d8;
+    padding: 20px;
+    margin: 15px 15px 60px 15px;
+  }
+  form button {
+    background-color: gray;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .form-content {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .form-content p {
+    width: 100%;
+  }
+  .form-content div {
+    padding-right: 10px;
+  }
+  .form-content div:last-child p{
+    margin-bottom: 0;
+  }
+  .form-content div:last-child p:first-child{
+    margin-top: 0;
+  }
+  .form-content label { 
+    margin-right:5px;
+  }
+  .form-content .input-group {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+  }
+  .form-content .input-group:last-child label, .form-content .input-group:nth-child(5) label {
+    width: 40%;
+  }
+  .form-content .input-group:last-child input {
+    width: 90%;
+  }
+  .form-content .input-group input, .form-content .input-group select {
+    width: 100%;
+  }
+
+  main .aside {
+    background-color: beige;
+    flex: 10%;
+    padding: 10px
+  }
+  main .nav {
+    background-color: #d1e3cd;
+    flex:10%;
+    padding: 10px;
+  }
+  footer {
+    background-color: yellowgreen;
+    padding: 20px;
+  }
+  footer p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+

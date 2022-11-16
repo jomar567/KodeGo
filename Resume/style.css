@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Georgia, sans-serif;
+}
+.content-area {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(245, 239, 239);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.header .info {
+    text-align: left;
+    line-height: 10px;
+    align-items: flex-end;
+}
+.header img {
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 2px #888888;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.main h2 {
+    border-bottom: 1px solid #000;
+}
+.main p {
+    text-align: justify;
+    line-height: 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    line-height: 10px;
+}
+
+.left {
+width: 25%;
+}
+
+.right {
+width: 75%;
+}
